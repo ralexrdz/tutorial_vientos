@@ -2,17 +2,27 @@
 
 const Hapi = require('hapi');
 
+var routes = require('./src/routes')
+
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
 
-server.start(function () {
-    console.log('Server running at:', server.info.uri);
+for (var route in routes)
+ {
+ 	server.route(routes[route])
+ }
+
+server.register(require('vision'), (err) => {
+
+    server.views({
+        engines: {
+            html: require('handlebars')
+        },
+        path: './src/views'
+    });
 });
 
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, reply) {
-        reply('Hello, world!');
-    }
+
+server.start(function () {
+    console.log('Server running at:', server.info.uri);
 });
