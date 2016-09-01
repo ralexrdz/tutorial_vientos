@@ -9,23 +9,65 @@ module.exports = function()
 	},
 	{
 		method: 'GET',
-    path: '/calendar',
+    path: '/day',
     handler: function (request, reply) {
-    	reply.view('calendar')
+    	reply.view('day')
 		}
 	},
 	{
 		method: 'GET',
-    path: '/year', //'/templs/modal, '/templs',? igual acá, cómo iría la ruta
+    path: '/events-list', 
+    handler: function (request, reply) {
+      reply.view('events-list')
+		}
+	},
+	{
+		method: 'GET',
+    path: '/modal',
+    handler: function (request, reply) {
+      reply.view('modal')
+		}
+	},
+		{
+		method: 'GET',
+    path: '/month-day',
+    handler: function (request, reply) {
+    	reply.view('month-day')
+		}
+	},
+	{
+		method: 'GET',
+    path: '/month', 
+    handler: function (request, reply) {
+      reply.view('month')
+		}
+	},
+	{
+		method: 'GET',
+    path: '/week-days',
+    handler: function (request, reply) {
+      reply.view('week-days')
+		}
+	},
+		{
+		method: 'GET',
+    path: '/week',
+    handler: function (request, reply) {
+    	reply.view('week')
+		}
+	},
+	{
+		method: 'GET',
+    path: '/year-month', 
+    handler: function (request, reply) {
+      reply.view('year-month')
+		}
+	},
+	{
+		method: 'GET',
+    path: '/year',
     handler: function (request, reply) {
       reply.view('year')
-		}
-	},
-	{
-		method: 'GET',
-    path: '/about',
-    handler: function (request, reply) {
-      reply.view('about')
 		}
 	},
 	{

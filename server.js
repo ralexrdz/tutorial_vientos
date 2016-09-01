@@ -18,10 +18,11 @@ server.register(require('vision'), (err) => {
         engines: {
             html: require('handlebars')
         },
-        path: './src/views'
-        //tmplsPath: './src/views/tmpls', //aquí  puse esto pero no estoy segura cómo sería
+        path: './src/views',
+        partialsPath: './src/views/tmpls'
     });
 });
+
 
 
 server.start(function () {

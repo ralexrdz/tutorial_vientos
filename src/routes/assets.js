@@ -21,6 +21,15 @@ module.exports = function () {
       }
     }, {
       method: 'GET',
+      path: '/less/{file}',
+      config: {
+        handler: function (request, reply) {
+          reply.file('public/less/' + request.params.file + '.less')
+        },
+        auth: false
+      }
+    }, {
+      method: 'GET',
       path: '/img/{file}',
       config: {
         handler: function (request, reply) {
