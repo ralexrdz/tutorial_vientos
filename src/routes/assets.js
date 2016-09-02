@@ -64,15 +64,6 @@ module.exports = function () {
         },
         auth: false
       }
-    }, {
-      method: 'GET',
-      path: '/bower/{folder}/{file}',
-      config: {
-        handler: function (request, reply) {
-          reply.file('bower_components/' + request.params.folder + '/' + request.params.file)
-        },
-        auth: false
-      }
     }
   ]
 }()

@@ -1,71 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Calendario Vientos</title>
+    <head>
+        <title>Calendario Vientos</title>
+            
+            <link rel="stylesheet" href="http://bootstrap-calendar.azurewebsites.net/css/calendar.min.css">
+            <link rel="stylesheet" href="http://bootstrap-calendar.azurewebsites.net/css/calendar.css">
+            <link rel="stylesheet" href="http://bootstrap-calendar.azurewebsites.net/components/bootstrap2/css/bootstrap.css">
+            <link rel="stylesheet" href="http://bootstrap-calendar.azurewebsites.net/components/bootstrap2/css/bootstrap-responsive.css">
+            
+            
+         <script type="text/javascript">
+            var disqus_shortname = 'bootstrapcalendar'; // required: replace example with your forum shortname
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+    </head>
 
-    <meta charset="UTF-8">
-    <meta name="description" content="Full view calendar component for twitter bootstrap with year, month, week, day views.">
-    <meta name="keywords" content="jQuery,Bootstrap,Calendar,HTML,CSS,JavaScript,responsive,month,week,year,day">
+    <body>
 
-
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/github.min.css"/>
-
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular-bootstrap-colorpicker/3.0.25/css/colorpicker.min.css"/>
-
-    <link rel="stylesheet" href="//mattlewis92.github.io/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css"/>
-
-    <link rel="stylesheet" href="//mattlewis92.github.io/angular-bootstrap-calendar/docs/docs.css"/>
-
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-
-    <script type="text/javascript" src="//mattlewis92.github.io/angular-bootstrap-calendar/docs/examples/kitchen-sink/javascript.js"></script>
-
-    <script type="text/javascript" src="//mattlewis92.github.io/angular-bootstrap-calendar/docs/examples/helpers.js"></script>
-
-    <script type="text/javascript" src="//mattlewis92.github.io/angular-bootstrap-calendar/docs/docs.js"></script>
-
-    <script type="text/javascript" src="//mattlewis92.github.io/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.min.js"></script>
-
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-bootstrap-colorpicker/3.0.25/js/bootstrap-colorpicker-module.min.js"></script>
-
-    <script type="text/javascript" src="//cdn.rawgit.com/jkbrzt/rrule/v2.1.0/lib/rrule.js"></script>
-
-    <script type="text/javascript" src="//cdn.rawgit.com/pc035860/angular-highlightjs/v0.6.1/build/angular-highlightjs.min.js"></script>
-
-    <script type="text/javascript" src="//cdn.rawgit.com/ocombe/ocLazyLoad/1.0.9/dist/ocLazyLoad.min.js"></script>
-
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-
-    <script type="text/javascript" src="//cdn.rawgit.com/ocombe/ocLazyLoad/1.0.9/dist/ocLazyLoad.min.js"></script>
-
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.min.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
-
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.min.js"></script>
-
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.4/interact.min.js"></script>
-
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js"></script>
-
-
-    <link rel="stylesheet" href="http://a.disquscdn.com/next/embed/styles/lounge.b0d3097b9af2aea963f18ecf4edbea4a.css">
-    <link rel="stylesheet" href="http://a.disquscdn.com/next/embed/styles/discovery.ec9371c4ef39ecee074c2acf24d5e0e2.css">
-    <link rel="stylesheet" href="http://bootstrap-calendar.azurewebsites.net/components/bootstrap2/css/bootstrap.css">
-    <link rel="stylesheet" href="http://bootstrap-calendar.azurewebsites.net/components/bootstrap2/css/bootstrap-responsive.css">
-    <link rel="stylesheet" href="http://bootstrap-calendar.azurewebsites.net/css/calendar.css">
-    <link rel="stylesheet" href="http://bootstrap-calendar.azurewebsites.net/css/calendar.min.css">
-
-</head>
-<body>
-<div class="container">
     <div class="hero-unit">
         <h1>Calendario Vientos Prueba</h1>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-        </script>
     </div>
 
     <div class="page-header">
@@ -89,6 +46,7 @@
         <div class="span9">
             <div id="calendar"></div>
         </div>
+
         <div class="span3">
             <div class="row-fluid">
                 <select id="first_day" class="span12">
@@ -97,7 +55,7 @@
                     <option value="1">First day of week is Monday</option>
                 </select>
                 <select id="language" class="span12">
-                    <option value="">Select Language (default: en-US)</option>
+                    <option value="">Select Language (default: es-MX)</option>
                     <option value="bg-BG">Bulgarian</option>
                     <option value="nl-NL">Dutch</option>
                     <option value="fr-FR">French</option>
@@ -123,15 +81,6 @@
                 <label class="checkbox">
                     <input type="checkbox" value="#events-modal" id="events-in-modal"> Open events in modal window
                 </label>
-                <label class="checkbox">
-                    <input type="checkbox" id="format-12-hours"> 12 Hour format
-                </label>
-                <label class="checkbox">
-                    <input type="checkbox" id="show_wb" checked> Show week box
-                </label>
-                <label class="checkbox">
-                    <input type="checkbox" id="show_wbn" checked> Show week box number
-                </label>
             </div>
 
             <h4>Events</h4>
@@ -150,46 +99,38 @@
             <a href="#" data-dismiss="modal" class="btn">Close</a>
         </div>
     </div>
+    
+        <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/components/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/components/underscore/underscore-min.js"></script>
+        <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/components/bootstrap2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/components/jstimezonedetect/jstz.min.js"></script>
+        
+        <script type="text/javascript" src="js/language/bg-BG.js"></script>
+        <script type="text/javascript" src="js/language/nl-NL.js"></script>
+        <script type="text/javascript" src="js/language/fr-FR.js"></script>
+        <script type="text/javascript" src="js/language/de-DE.js"></script>
+        <script type="text/javascript" src="js/language/el-GR.js"></script>
+        <script type="text/javascript" src="js/language/it-IT.js"></script>
+        <script type="text/javascript" src="js/language/hu-HU.js"></script>
+        <script type="text/javascript" src="js/language/pl-PL.js"></script>
+        <script type="text/javascript" src="js/language/pt-BR.js"></script>
+        <script type="text/javascript" src="js/language/ro-RO.js"></script>
+        <script type="text/javascript" src="js/language/es-CO.js"></script>
+        <script type="text/javascript" src="js/language/es-MX.js"></script>
+        <script type="text/javascript" src="js/language/es-ES.js"></script>
+        <script type="text/javascript" src="js/language/ru-RU.js"></script>
+        <script type="text/javascript" src="js/language/sk-SR.js"></script>
+        <script type="text/javascript" src="js/language/sv-SE.js"></script>
+        <script type="text/javascript" src="js/language/zh-CN.js"></script>
+        <script type="text/javascript" src="js/language/cs-CZ.js"></script>
+        <script type="text/javascript" src="js/language/ko-KR.js"></script>
+        <script type="text/javascript" src="js/language/zh-TW.js"></script>
+        <script type="text/javascript" src="js/language/id-ID.js"></script>
+        <script type="text/javascript" src="js/language/th-TH.js"></script>
 
-
-    <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/components/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/components/underscore/underscore-min.js"></script>
-    <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/components/bootstrap2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/components/jstimezonedetect/jstz.min.js"></script>
-    <script type="text/javascript" src="js/language/bg-BG.js"></script>
-    <script type="text/javascript" src="js/language/nl-NL.js"></script>
-    <script type="text/javascript" src="js/language/fr-FR.js"></script>
-    <script type="text/javascript" src="js/language/de-DE.js"></script>
-    <script type="text/javascript" src="js/language/el-GR.js"></script>
-    <script type="text/javascript" src="js/language/it-IT.js"></script>
-    <script type="text/javascript" src="js/language/hu-HU.js"></script>
-    <script type="text/javascript" src="js/language/pl-PL.js"></script>
-    <script type="text/javascript" src="js/language/pt-BR.js"></script>
-    <script type="text/javascript" src="js/language/ro-RO.js"></script>
-    <script type="text/javascript" src="js/language/es-CO.js"></script>
-    <script type="text/javascript" src="js/language/es-MX.js"></script>
-    <script type="text/javascript" src="js/language/es-ES.js"></script>
-    <script type="text/javascript" src="js/language/ru-RU.js"></script>
-    <script type="text/javascript" src="js/language/sk-SR.js"></script>
-    <script type="text/javascript" src="js/language/sv-SE.js"></script>
-    <script type="text/javascript" src="js/language/zh-CN.js"></script>
-    <script type="text/javascript" src="js/language/cs-CZ.js"></script>
-    <script type="text/javascript" src="js/language/ko-KR.js"></script>
-    <script type="text/javascript" src="js/language/zh-TW.js"></script>
-    <script type="text/javascript" src="js/language/id-ID.js"></script>
-    <script type="text/javascript" src="js/language/th-TH.js"></script>
-    <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/js/calendar.js"></script>
-    <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/js/calendar.min.js"></script>
-    <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/js/app.js"></script>
-
-    <script type="text/javascript">
-        var disqus_shortname = 'bootstrapcalendar'; // required: replace example with your forum shortname
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
+        <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/js/calendar.js"></script>
+        <script type="text/javascript" src="http://bootstrap-calendar.azurewebsites.net/js/calendar.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
 </div>
-</body>
+    </body>
 </html>

@@ -24,7 +24,6 @@ server.register(require('vision'), (err) => {
 });
 
 
-
 server.start(function () {
     console.log('Server running at:', server.info.uri);
 });
