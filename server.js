@@ -1,6 +1,8 @@
 'use strict';
 
 const Hapi = require('hapi');
+const Inert = require('inert');
+
 
 var routes = require('./src/routes')
 
@@ -23,6 +25,7 @@ server.register(require('vision'), (err) => {
     });
 });
 
+server.register(Inert, () => {})
 
 server.start(function () {
     console.log('Server running at:', server.info.uri);

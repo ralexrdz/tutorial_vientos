@@ -6,7 +6,7 @@ module.exports = function () {
       config: {
         handler: function (request, reply) {
           console.log('js:' + request.params.file)
-          reply.file('public/js/' + request.params.file + '.js')
+          reply.file('public/js/' + request.params.file )
         },
         auth: false
       }
